@@ -1,13 +1,12 @@
 package scenarios;
 
-
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
-
+import org.openqa.selenium.support.PageFactory;
+import pages.OratorPage;
 import java.io.IOException;
 import java.net.MalformedURLException;
-
 import static scenarios.AndroidSetup.driver;
 
 /**
@@ -29,20 +28,25 @@ public class TestScenario {
 
 
     @Test
-    public void oratorTest()
-    {
-        String app_package_name = "maxsoft.osanda.com.oratortextreader:id/";
-        By txtField = By.id(app_package_name + "txtText");
-        By speakButton = By.id(app_package_name + "btnSpeak");
-
-        try {
-            driver.findElement(txtField).sendKeys("Orator testing completed successfully");
-            driver.findElement(speakButton).click();
-            System.out.println("Test passed!");
-        } catch (Exception e) {
-            System.out.println("Test failed!");
-            e.printStackTrace();
+    public void oratorSpeakTest() {
+        OratorPage oratorPage = PageFactory.initElements(driver, OratorPage.class);
+        String text = "Orator testing completed successfully";
+            try {
+                oratorPage.speakTest(text);
+                System.out.println("Test passed!");
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+                System.out.println("Test failed!");
+                e.printStackTrace();
+            }
         }
+
+
+    @After
+    public void after(){
+        driver.quit();
     }
 
 }

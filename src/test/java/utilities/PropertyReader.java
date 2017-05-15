@@ -8,6 +8,7 @@ import java.util.Properties;
 /**
  * Created by Osanda on 4/30/2017.
  */
+
 public abstract class PropertyReader {
 
     public static String readingFromPropertyFile(String property) throws IOException {
