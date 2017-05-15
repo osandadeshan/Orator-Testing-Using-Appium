@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -45,9 +45,9 @@
     <orderEntry type="library" name="Maven: org.webbitserver:webbit:0.4.14" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty:3.5.2.Final" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-leg-rc:2.46.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.testng:testng:6.1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.testng:testng:6.8" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.beanshell:bsh:2.0b4" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.beust:jcommander:1.12" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.beust:jcommander:1.27" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.yaml:snakeyaml:1.6" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.appium:java-client:3.0.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.2.4" level="project" />
