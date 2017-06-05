@@ -1,4 +1,4 @@
-package scenarios;
+package stepImpl;
 
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.CapabilityType;
@@ -12,9 +12,9 @@ import static utilities.PropertyReader.readingFromPropertyFile;
  * Created by Osanda on 4/26/2017.
  */
 
-public abstract class AndroidSetup {
+public class AndroidSetup {
 
-    public static AndroidDriver driver;
+     static AndroidDriver driver;
 
         public static void prepareAndroidForAppium() throws IOException {
 
@@ -44,7 +44,6 @@ public abstract class AndroidSetup {
                 System.out.println(ex.getMessage());
             }
 
-
             // Set android VERSION desired capability. Set your mobile device's OS version.
             capabilities.setCapability(CapabilityType.VERSION, ANDROID_VERSION);
 
@@ -55,6 +54,11 @@ public abstract class AndroidSetup {
 
             // Other caps
             driver =  new AndroidDriver(new URL(APPIUM_SERVER_URL), capabilities);
+        }
+
+
+        public static void TearDown() {
+            driver.quit();
         }
 
 }

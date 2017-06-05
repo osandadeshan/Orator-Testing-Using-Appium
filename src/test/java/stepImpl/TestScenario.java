@@ -1,4 +1,4 @@
-package scenarios;
+package stepImpl;
 
 import org.junit.After;
 import org.junit.Before;
@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import pages.OratorPage;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import static scenarios.AndroidSetup.driver;
+import static stepImpl.AndroidSetup.driver;
 
 /**
  * Created by Osanda on 4/29/2017.
@@ -26,7 +26,6 @@ public class TestScenario {
         }
     }
 
-
     @Test
     public void oratorSpeakTest() {
         OratorPage oratorPage = PageFactory.initElements(driver, OratorPage.class);
@@ -40,10 +39,9 @@ public class TestScenario {
             }
         }
 
-
     @After
     public void after(){
-        driver.quit();
+        AndroidSetup.TearDown();
     }
 
 }

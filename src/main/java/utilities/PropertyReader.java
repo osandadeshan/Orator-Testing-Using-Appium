@@ -12,7 +12,7 @@ import java.util.Properties;
 public abstract class PropertyReader {
 
     public static String readingFromPropertyFile(String property) throws IOException {
-        File file = new File("resources\\app.properties");
+        File file = new File("env\\default.properties");
         FileInputStream fileInput = new FileInputStream(file);
         Properties properties = new Properties();
         properties.load(fileInput);
